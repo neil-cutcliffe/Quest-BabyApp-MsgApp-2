@@ -15,7 +15,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 
-const Card4Quest1 = styled('div')(({ theme }) => ({
+const Card4 = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette['Background']['Background'],
   boxShadow: theme.customShadows['cardShadow'].boxShadow,
   borderRadius: `8px`,
@@ -130,7 +130,7 @@ const Details1 = styled('div')(({ theme }) => ({
 
 function Card4Quest(props) {
   return (
-    <Card4Quest1 className={props.className}>
+    <Card4 className={props.className}>
       <ImageFrame>
         <Image1 props={props}></Image1>
       </ImageFrame>
@@ -140,7 +140,7 @@ function Card4Quest(props) {
           <Details1>{props.post.content}</Details1>
         </Details>
       </Content>
-    </Card4Quest1>
+    </Card4>
   );
 }
 

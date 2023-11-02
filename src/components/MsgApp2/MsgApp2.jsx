@@ -15,6 +15,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import Card4Quest from 'src/components/Card4Quest/Card4Quest';
+import ButtonFrame from 'src/components/ButtonFrame/ButtonFrame';
 
 const MsgApp21 = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
@@ -23,7 +24,7 @@ const MsgApp21 = styled('div')({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  height: `932px`,
+  height: 'auto',
   width: '100%',
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
@@ -48,9 +49,17 @@ const GridFrame = styled('div')({
   rowGap: `10px`,
 });
 
-const Card4Quest1 = styled(Card4Quest)(({ theme }) => ({
+const Card4Quest = styled(Card4Quest)(({ theme }) => ({
   width: `430px`,
   margin: `0px`,
+}));
+
+const ButtonFrame1 = styled(ButtonFrame)(({ theme }) => ({
+  height: `108px`,
+  width: `430px`,
+  position: `absolute`,
+  left: `0px`,
+  top: `706px`,
 }));
 
 function MsgApp2(props) {
@@ -59,9 +68,10 @@ function MsgApp2(props) {
       <GridFrame>
         {props.posts &&
           props.posts.map((mypost, index) => {
-            return <Card4Quest1 key={index} post={mypost} />;
+            return <Card4Quest key={index} post={mypost} />;
           })}
       </GridFrame>
+      <ButtonFrame1 />
     </MsgApp21>
   );
 }
