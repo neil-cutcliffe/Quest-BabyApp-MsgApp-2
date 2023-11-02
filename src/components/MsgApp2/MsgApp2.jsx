@@ -39,13 +39,13 @@ const GridFrame = styled('div')({
   isolation: `isolate`,
   padding: `0px`,
   boxSizing: `border-box`,
+  width: `100%`,
   margin: `0px`,
   overflow: `hidden`,
   height: `auto`,
   gridTemplateColumns: `repeat(auto-fit, minmax(430px, 1fr))`,
   columnGap: `10px`,
   rowGap: `10px`,
-  width: `100%`,
 });
 
 const Card4Quest1 = styled(Card4Quest)(({ theme }) => ({
